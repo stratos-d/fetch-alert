@@ -10,7 +10,7 @@ use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 class UserNotificationListBuilder
 {
     /**
-     * @param  iterable<AbstractNotificationResolver>  $resolvers
+     * @param iterable<AbstractNotificationResolver> $resolvers
      */
     public function __construct(
         #[AutowireIterator('app.notification_resolver')]

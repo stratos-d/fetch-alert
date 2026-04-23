@@ -13,7 +13,8 @@ while ensuring they cannot reach arbitrary internet hosts.
 ## Prerequisites
 
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or any Docker-compatible runtime)
-- [Visual Studio Code](https://code.visualstudio.com/) with the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
+- [Visual Studio Code](https://code.visualstudio.com/) with
+  the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension
 - A valid subscription or API key for the agent you want to use
 
 ## Quick Start

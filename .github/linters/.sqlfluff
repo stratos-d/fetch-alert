@@ -1,0 +1,7 @@
+[sqlfluff]
+dialect = mysql
+max_line_length = 160
+# LT01 spacing, LT02 indent: data rows are intentionally column-aligned
+# RF05 special chars: needed for GRANT patterns like `app\_%`
+# RF06 quoted identifiers: MySQL/Doctrine convention uses backticks everywhere
+exclude_rules = LT01, LT02, RF05, RF06

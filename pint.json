@@ -1,5 +1,8 @@
 {
-    "exclude": [
-        "var"
-    ]
+    "exclude": ["var"],
+    "rules": {
+        "phpdoc_align": {
+            "align": "left"
+        }
+    }
 }

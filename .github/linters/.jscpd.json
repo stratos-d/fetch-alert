@@ -1,0 +1,12 @@
+{
+    "threshold": 3,
+    "ignore": [
+        "**/tests/**",
+        "**/vendor/**",
+        "**/var/**",
+        "**/node_modules/**",
+        "**/.idea/**",
+        "config/reference.php"
+    ],
+    "reporters": ["consoleFull"]
+}

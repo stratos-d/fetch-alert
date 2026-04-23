@@ -67,7 +67,8 @@ Example with the DigitalOcean Domains service ("Networking" > "Domains"):
 
 Copy your project on the server using `git clone`, `scp`, or any other tool
 that may fit your need.
-If you use GitHub, you may want to use [a deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys#deploy-keys).
+If you use GitHub, you may want to
+use [a deploy key](https://docs.github.com/en/free-pro-team@latest/developers/overview/managing-deploy-keys#deploy-keys).
 Deploy keys are also [supported by GitLab](https://docs.gitlab.com/user/project/deploy_keys/).
 
 Example with Git:
@@ -118,7 +119,8 @@ docker compose -f compose.yaml -f compose.prod.yaml up --wait
 
 ## Deploying on Multiple Nodes
 
-If you want to deploy your app on a cluster of machines, you can use [Docker Swarm](https://docs.docker.com/engine/swarm/stack-deploy/),
+If you want to deploy your app on a cluster of machines, you can
+use [Docker Swarm](https://docs.docker.com/engine/swarm/stack-deploy/),
 which is compatible with the provided Compose files.
 To deploy on Kubernetes, take a look
 at [the Helm chart provided with API Platform](https://api-platform.com/docs/deployment/kubernetes/),
@@ -127,7 +129,8 @@ which can be easily adapted for use with Symfony Docker.
 ## Passing local environment variables to containers
 
 By default, `.env.local` and `.env.*.local` files are excluded from production images.
-If you want to pass them to your containers, you can use the [`env_file` attribute](https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/#use-the-env_file-attribute):
+If you want to pass them to your containers, you can use the [
+`env_file` attribute](https://docs.docker.com/compose/how-tos/environment-variables/set-environment-variables/#use-the-env_file-attribute):
 
 ```yaml
 # compose.prod.yaml

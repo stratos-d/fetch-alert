@@ -71,6 +71,7 @@ List the notifications a user is eligible for.
   }
 ]
 ```
+
 **Example**
 
 ```bash

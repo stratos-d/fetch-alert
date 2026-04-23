@@ -1,0 +1,6 @@
+config/packages/zenstruck_foundry.yaml
+
+# Vendor / build artifacts
+vendor/
+var/
+.phpunit.cache/

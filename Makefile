@@ -11,7 +11,7 @@ SYMFONY  = $(PHP) bin/console
 
 # Misc
 .DEFAULT_GOAL = help
-.PHONY        : help build up start down logs sh composer vendor sf cc test test-init seed analyze pint phpstan
+.PHONY        : help build up start down logs sh composer vendor sf cc test test-init seed analyze pint phpstan prettier lint
 
 ## —— 🎵 🐳 The Symfony Docker Makefile 🐳 🎵 ——————————————————————————————————
 help: ## Outputs this help screen
@@ -75,4 +75,25 @@ pint:
 phpstan:
 	@$(PHP_CONT) vendor/bin/phpstan analyse --memory-limit=512M
 
-analyze: pint phpstan
+prettier:
+	@docker run --rm -v "$(CURDIR):/work" -w /work node:22-alpine npx --yes prettier --write "**/*.{yaml,yml,md}"
+
+lint:
+	@docker run --rm \
+		-e RUN_LOCAL=true \
+		-e DEFAULT_BRANCH=main \
+		-e FILTER_REGEX_EXCLUDE='(config/reference\.php|docs/.*\.md)' \
+		-e VALIDATE_CHECKOV=false \
+		-e VALIDATE_TRIVY=false \
+		-e VALIDATE_BIOME_FORMAT=false \
+		-e VALIDATE_BIOME_LINT=false \
+		-e VALIDATE_ENV=false \
+		-e VALIDATE_PHP_BUILTIN=false \
+		-e VALIDATE_PHP_PHPCS=false \
+		-e VALIDATE_PHP_PHPSTAN=false \
+		-e VALIDATE_PHP_PINT=false \
+		-e VALIDATE_PHP_PSALM=false \
+		-v "$(CURDIR):/tmp/lint" \
+		ghcr.io/super-linter/super-linter:slim-v8
+
+analyze: pint phpstan prettier

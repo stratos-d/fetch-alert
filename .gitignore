@@ -22,3 +22,6 @@ phpstan.neon
 Thumbs.db
 *.swp
 *~
+
+# IDE
+/.idea/

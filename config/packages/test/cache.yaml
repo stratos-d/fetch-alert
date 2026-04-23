@@ -1,0 +1,6 @@
+framework:
+    cache:
+        pools:
+            user_notifications.cache:
+                adapter: cache.adapter.array
+                default_lifetime: 1

@@ -16,4 +16,5 @@ we recommend using [_template-sync_](https://github.com/coopTilleuls/template-sy
 2. Resolve conflicts, if any
 3. Run `git cherry-pick --continue`
 
-For more advanced options, refer to [the documentation of _template sync_](https://github.com/coopTilleuls/template-sync#template-sync).
+For more advanced options, refer to [the documentation of _template
+sync_](https://github.com/coopTilleuls/template-sync#template-sync).

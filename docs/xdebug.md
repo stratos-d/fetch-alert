@@ -4,7 +4,8 @@ The default development image is shipped with [Xdebug](https://xdebug.org/),
 a popular debugger and profiler for PHP.
 
 When using [Dev Containers](https://containers.dev/), Xdebug is pre-configured and works out of the box.
-Open the **Run and Debug** panel in Visual Studio Code and start the **Debug PHP** launch configuration, then set your breakpoints and load a page.
+Open the **Run and Debug** panel in Visual Studio Code and start the **Debug PHP** launch configuration, then set your
+breakpoints and load a page.
 
 For other setups, because it has a significant performance overhead, the step-by-step debugger
 is disabled by default.
@@ -58,27 +59,28 @@ You can now use the debugger!
 
 ## Debugging with Xdebug and Visual Studio Code
 
-1. Install necessary [PHP extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode).
+1. Install
+   necessary [PHP extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=DEVSENSE.phptools-vscode).
 2. Add [debug configuration](https://code.visualstudio.com/docs/debugtest/debugging-configuration#_launch-configurations)
    into your `.vscode\launch.json` file.
 
-   Example:
+Example:
 
-   ```json
-   {
-     "version": "0.2.0",
-     "configurations": [
-       {
-         "name": "Debug PHP",
-         "type": "php",
-         "request": "launch",
-         "pathMappings": {
-           "/app": "${workspaceFolder}"
-         }
-       }
-     ]
-   }
-   ```
+```json
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug PHP",
+      "type": "php",
+      "request": "launch",
+      "pathMappings": {
+        "/app": "${workspaceFolder}"
+      }
+    }
+  ]
+}
+```
 
 3. Use [Run and Debug](https://code.visualstudio.com/docs/debugtest/debugging#_start-a-debugging-session)
    options and run `Debug PHP` to listen for upcoming connections

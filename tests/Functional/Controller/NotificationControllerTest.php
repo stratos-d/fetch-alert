@@ -37,7 +37,7 @@ class NotificationControllerTest extends WebTestCase
         self::assertContains('Configurar dispositivo Android', $titles);
     }
 
-    public function test_ineligible_user_receives_emppty_list(): void
+    public function test_ineligible_user_receives_empty_list(): void
     {
         $client = static::createClient();
 
@@ -51,7 +51,6 @@ class NotificationControllerTest extends WebTestCase
         $payload = json_decode($client->getResponse()->getContent(), true, flags: JSON_THROW_ON_ERROR);
 
         self::assertIsArray($payload);
-        $titles = array_column($payload, 'title');
-        self::assertContains('Configurar dispositivo Android', $titles);
+        self::assertEmpty($payload);
     }
 }
