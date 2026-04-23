@@ -1,0 +1,8 @@
+parameters:
+    level: 6
+    tmpDir: var/cache/phpstan
+    paths:
+        - bin/
+        - config/
+        - public/
+        - src/
