@@ -74,5 +74,5 @@ List the notifications a user is eligible for.
 **Example**
 
 ```bash
-curl -k 'https://localhost/notifications?userId=5'
+curl -k 'https://localhost/notifications?userId=2'
 ```
